@@ -1,0 +1,23 @@
+{
+  "name": "Plate-Predictor",
+  "version": "1.0.0",
+  "description": "\"Pico y Placa\" predictor",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mvbautista2/Plate-Predictor.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mvbautista2/Plate-Predictor/issues"
+  },
+  "homepage": "https://github.com/mvbautista2/Plate-Predictor#readme",
+  "devDependencies": {
+    "jest": "^27.5.1"
+  }
+}

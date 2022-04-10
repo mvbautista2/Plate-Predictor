@@ -9,15 +9,19 @@
       rel="stylesheet"
       href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
     />
-    <link rel="stylesheet" href="assets/css/styles.css" />
-    <script src="./utils/textTransform.js"></script>
-    <script src="./utils/rules.js"></script>
-    <script src="./controllers/plate.js"></script>
+    <link rel="stylesheet" href="./src/assets/css/styles.css" />
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="./src/utils/textTransform.js"></script>
+    <script src="./src/utils/rules.js"></script>
+    <script src="./src/controllers/plate.js"></script>
   </head>
   <body>
     <div class="form">
-      <form onsubmit="main()">
-        <div>
+      <form>
+        <div class="form-title">
+          <span><i class="icon icon-user">"Pico y Placa" Predictor</i></span>
+        </div>
+        <div class="form-group">
           <label>License plate number: </label>
           <input
             type="text"
@@ -29,7 +33,7 @@
             pattern="^([A-Za-z]{3})+[0-9]{4}$"
           />
         </div>
-        <div>
+        <div class="form-group">
           <label>A date: </label>
           <input
             type="date"
@@ -38,7 +42,7 @@
             required
           />
         </div>
-        <div>
+        <div class="form-group">
           <label>A time: </label>
           <input
             type="time"
@@ -48,7 +52,9 @@
           />
         </div>
         <div class="form-group">
-          <button type="submit" class="btn btn-block search">Search</button>
+          <button type="button" onclick="main()" class="btn btn-block search">
+            Search
+          </button>
         </div>
       </form>
     </div>

@@ -1,4 +1,4 @@
-let Plate = class {
+class Plate {
   constructor(numberPlate) {
     this.numberPlate = numberPlate;
   }
@@ -21,7 +21,7 @@ let Plate = class {
         timeSearch <= pastRules.Hours.SecondMax)
     );
   }
-};
+}
 
 function main() {
   let numberPlate = document.getElementById("numberPlate").value;
@@ -33,5 +33,9 @@ function main() {
   );
   dateSearch = new Date(dateSearch);
   const day = parseInt(dateSearch.getDay());
-  alert(plate.search(lastDigitPlate, day, timeSearch));
+  swal({
+    title: "The result is:",
+    text: plate.search(lastDigitPlate, day, timeSearch),
+    icon: "success",
+  });
 }
