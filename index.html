@@ -10,21 +10,45 @@
       href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
     />
     <link rel="stylesheet" href="assets/css/styles.css" />
+    <script src="./utils/textTransform.js"></script>
+    <script src="./utils/rules.js"></script>
+    <script src="./controllers/plate.js"></script>
   </head>
   <body>
     <div class="form">
-      <form>
+      <form onsubmit="main()">
         <div>
           <label>License plate number: </label>
-          <input type="text" class="form-control item" placeholder="ABC-1234" />
+          <input
+            type="text"
+            class="form-control item"
+            placeholder="ABC1234"
+            id="numberPlate"
+            onblur="upperCase()"
+            required
+            pattern="^([A-Za-z]{3})+[0-9]{4}$"
+          />
         </div>
         <div>
           <label>A date: </label>
-          <input type="date" class="form-control item" />
+          <input
+            type="date"
+            class="form-control item"
+            id="dateSearch"
+            required
+          />
         </div>
         <div>
           <label>A time: </label>
-          <input type="time" class="form-control item" />
+          <input
+            type="time"
+            class="form-control item"
+            id="timeSearch"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <button type="submit" class="btn btn-block search">Search</button>
         </div>
       </form>
     </div>
