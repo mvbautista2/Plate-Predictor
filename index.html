@@ -13,6 +13,7 @@
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <script src="./src/utils/textTransform.js"></script>
     <script src="./src/utils/rules.js"></script>
+    <script src="./src/utils/validatorFields.js"></script>
     <script src="./src/controllers/plate.js"></script>
   </head>
   <body>
@@ -26,11 +27,10 @@
           <input
             type="text"
             class="form-control item"
-            placeholder="ABC1234"
+            placeholder="ABC-1234"
             id="numberPlate"
             onblur="upperCase()"
             required
-            pattern="^([A-Za-z]{3})+[0-9]{4}$"
           />
         </div>
         <div class="form-group">

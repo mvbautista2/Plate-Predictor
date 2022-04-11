@@ -33,9 +33,22 @@ function main() {
   );
   dateSearch = new Date(dateSearch);
   const day = parseInt(dateSearch.getDay());
-  swal({
-    title: "The result is:",
-    text: plate.search(lastDigitPlate, day, timeSearch),
-    icon: "success",
-  });
+
+  numberPlate == "" || dateSearch == "Invalid Date" || timeSearch == ""
+    ? swal({
+        title: "Empty fills",
+        text: "Please, you have to fill all the fields to search",
+        icon: "warning",
+      })
+    : !validateNumberPlate(numberPlate)
+    ? swal({
+        title: "Incorrect Number Plate",
+        text: "Please, you have to add a valid number plate, e.g. ABC-1234",
+        icon: "warning",
+      })
+    : swal({
+        title: "The result is:",
+        text: plate.search(lastDigitPlate, day, timeSearch),
+        icon: "success",
+      });
 }
